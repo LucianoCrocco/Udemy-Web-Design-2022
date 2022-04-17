@@ -1,0 +1,101 @@
+/*
+Ejercicio completo con HTML y CSS
+1. Crear un documento HTML y vincularlo con un CSS
+2. Crear una estructura HTML que cuente con un contenedor general, cabecera, menu, barra lateral, seccion de contenido principal, elementos dentro del contenedor principal y footer.
+3. Todo el contenido debe estar dentro del contenedor general y su ancho será de 1200px y estar centrado.
+4. Header debe ocupar el 100% del ancho y tener un texto grande centrado.
+5. Menu debe tener los elementos uno al lado del otro
+6. El contenido principal debe tener un ancho del 70%
+7. El contenido dentro del contenedor principal debe ser una cuadricula con 4 lines de 2 cajas.
+8. La barra lateral debe tener un ancho del 30%
+9. EL footer debe tener un ancho del 100% del div y estar abajo del todo
+*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contenedor-general {
+    width: 1200px;
+    margin-top: 10px;
+    margin: auto;
+}
+
+#cabecera {
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    background-color: rgb(82, 82, 163);
+}
+
+#menu {
+    background-color: #eee;
+}
+
+#menu li{
+    display: block;
+    list-style: none;
+    float: left;
+    border-right: 1px solid black;
+}
+
+#menu > ul > li > a {
+    display: block;
+    color: dodgerblue;
+    padding: 10px 50px;
+}
+
+#menu > ul > li:hover > a {
+    color: white;
+}
+
+#menu > ul > li:hover {
+    background-color: rgb(39, 39, 80);
+    cursor: pointer;
+}
+
+.clearfix {
+    clear: both;
+    float: none;
+}
+
+#contenido {
+    width: 70%;
+    float: left;
+}
+
+#barralateral {
+    width: 30%;
+    height: 100%;
+    float: left;
+}
+
+#contenido .caja {
+    width: 40%;
+    height: 250px;
+    background-color:red;
+    float: left;
+    border: 5px solid blue ;
+    color: white;
+    margin: 10px;
+}
+
+#contenido > h1 {
+    width: auto;
+    text-align: center;
+    padding: 7px;
+    border-bottom: 1px solid #ccc;
+}
+
+#footer {
+    width: 100%;
+    height: 55px;
+    line-height: 50px;
+    text-align: center;
+    color: #444;
+    background-color: #eee;
+    border-top: 1px solid #ccc;
+}

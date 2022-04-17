@@ -1,0 +1,13 @@
+Introducción al Máster en CSS, Responsive, SASS, Less, Flexbox, Grid y más
+
+¿Que apredenderás en el máster?
+HTML y CSS
+Responsive
+Animaciones
+Preprocesador CSS SASS
+Preprocesador LESS
+Maquetación Flexbox
+Maquetación CSS Grid Layout
+Framework Bootstrap 4
+Maquetación web peofesional
+Desarrollo web front end

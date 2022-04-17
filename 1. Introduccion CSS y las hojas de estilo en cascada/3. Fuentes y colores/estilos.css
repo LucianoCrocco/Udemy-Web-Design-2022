@@ -1,0 +1,24 @@
+@font-face {
+    font-family: Monserrat;
+    src: url(Asul/Asul-Regular.ttf);
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif, Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    font-style: italic;
+    color: #cccccc;
+}
+
+h3 {
+    font-family: Monserrat, "Comic Sans MS", Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+    color: rgb(250, 150, 56, 0.5);
+}
+
+p{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 102%;
+    font-weight: bold;
+    color: hsla(87, 93%, 38%);
+}

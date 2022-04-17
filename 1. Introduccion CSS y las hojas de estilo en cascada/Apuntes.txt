@@ -1,0 +1,87 @@
+1. Introducción CSS
+
+
+1. Primeros pasos CSS
+CSS son hojas de estilo en cascada (Cascading Stle Sheets). Es un lenguaje de estilos utilizado para dar diseño a la presentación de documentos HTML o XML.
+
+Para linkear nuestro CSS con HTML simplemente ponemos la etiqueta link en el head de HTML, le especificamos la relacion stylesheet y el href al PATH relativo del archivo CSS. 
+
+Es importante tener nuestro CSS en un archivo aparte y no tenerlo nivel de página o a nivel de etiqueta.
+
+
+2. Selectores CSS
+Tipos de selectores:
+Selector universal: *
+Selectores de etiqueta: body, footer, etc
+Selectores de id: #ID
+Selectores de clases: .Clase
+Selectores de atributo: ETIQUETA["ATRIBUTO"]. Ejemplo: input[type="text"]{}
+Selectores hijo: PADRE > HIJO > ...n > OBJETIVO.
+El nivel de especificidad ira de CSS->nivel de página->nivel de etiqueta o selector de etiquetas->clase->id o CSS de arriba hacia abajo. Con la propiedad !important al lado de una propiedad CSS dara mayor especificadad a todo el documento.
+
+
+3. Fuentes y colores
+Fuentes externas: https://fonts.google.com/ -> Google o cualquier otra pagina nos va a proporcionar un import CSS o un link HTML y la familia para aplicarle la fuente en el CSS.
+Si descargamos una fuente y la importamos a nuestro archivo debemos utilizar la propiedad @font-face {font-family: NOMBRE_FAMILIA; src: url(PATH_RELATIVO);}
+La propiedad font-family nos permite cambiar la familia de fuentes que queremos que despliegue el navegador. Es imporante que en caso que una fuente falle por motivo X tengamos una lista, ya que si falla en cargar la siguiente declarada en el font family se intentara cargar.
+
+Tenemos varios tipos de escalas para el font-size. Las mas utilizadas son px, em y %. 
+1 em = 16px.
+100% = normal | 105% = normal + 5 % | 95% = normal - 5%.
+
+Generador de colores CSS: https://htmlcolorcodes.com/es/
+Existen los colores por default de HTML, código hexadecimal, rgb, rgba, hsl, hsla (a es alpha, para darle mayor o menor transparencia).
+
+4. Fondos y textos
+background-repeat: Vamos a indicar si queremos que la imagne de fondo se repita para generar un patron en el fondo del sitio web.
+background-size: La cantidad de espacio del viewport que va a ocupar la imagen.
+background-attachment: Determina el comportamiento de la imagen, si va a acompañar el scroll o va a quedarse fija.
+background-position: Permite mover el eje que vamos a ver de la imagen.
+
+5. Modelos de cajas - Margenes, paddings, alto ancho y bordes en CSS
+El modelo de caja se compone del margen (separa los otros elementos HTML), border (genera un borde al contenido), padding (Genera un espaciado del contenido con el borde), y el contenido en sí.
+
+Con la propiedad float vamos a poder posicionar cajas a nuestro gusto. Float me parmite flotar elementos en el eje Y.
+Float es aplicable a todos los elementos de bloque.
+Con la propiedad display podemos cambiar el tipo a bloque o linea.
+
+La propiedad clear nos permite resetear la propiedad de los flotados para volver a colocar elementos en bloque en flotado por defecto.
+La propiedad la vamos a colocar en una clase la cual la vamos a asginar a un div luego de la caja flotada. También debemos hacer un float: none;
+
+Float:none; tells the elements that you do not wish for it to float.
+Clear tells other elements whether they should be allowed to float or not, and in the case of none, you're allowing floats on both sides. it's why when you use clear:both; that floating stops.
+
+6. Sombras y efectos
+La propiedad text/box-shadow agrega sombra a un elemento/contenido. Su nomenclatura es la siguiente: *-shadow: EJE-X-POSICION EJE-Y-POSICION CANTIDAD-DIFUMINADO COLOR.
+Puedo ponerle la propiedad inset a un box shadow para que la sombra se genere dentro de la caja y no fuera.
+
+border-radius generara un redondeo en las esquinas de la caja de X cantidad
+
+7. Overflow y posicionamientos.
+La propiedad overflow nos va a permitir controlar lo que se sale de una caja y lo que se queda dentro. Puedo indicar overflow para tanto el eje y, eje x, o ambos.
+overflow: hidden; Todo lo que salga afuera se oculta.
+overflow: visible; Es el por defecto. Por mas que se salga el contenido se sigue mostrando.
+overflow: scroll; Agrega una barra de scroll lateral para ver todo el contenido
+
+
+En general para los posicionamiento vamos a utilizar las propiedades top, right, left, bottom. Va a indicar la posicion en unidades de medida de donde queremos que se encuentre ese elemento.
+
+El posicionamiento estático mantendrá el div en la posición por default, sin poder modificar su posición.
+
+El posicionamiento relativo mantendrá el div en la posición por default o la que le indiquemos en el CSS.
+
+El posicionamiento absoluto es similar a la static, se utiliza normalmente cuando estamos trabajando dentro de otro elemento de tipo div. El absolute se va a posicionar de manera "absoluta", pero teniendo en cuenta el elemento que lo contiene. Si no lo contiene ningún elemento se va a tomar en cuenta el body (En este caso, si solo tiene el body es una buena práctica utilizar el default). El absolut no funciona si su div padre es static. Se va comportar como un elemento de línea.
+
+El posicionamiento fijo se va a colocar de manera relativa al viewport. Se va a mantener de manera fija en la posición de pantalla que le indicamos/que tiene por default. Si tenemos un scroll vertical y utilizamos el scroll, este elemento va a bajar conforme se utilice la barra de scroll.
+
+El posicionamiento sticky se caracteriza por tener que usar alguna de las propiedades de top, left, bottom, right. Se posiciona como un elemento de manera relativa y a la hora de mover la pantalla se utiliza como un elemento de manera fixed. Si trabajamos con safari debemos tener en cuenta una corrección, debemos agregar position: -webkit-sticky;. La posición sticky no funciona en Internet Explorer.
+
+Hasta ahora trabajamos con el eje de X (horizontal) y el eje Y (vertical). El eje Z representa las capas de profundidad de un elemento dado. 
+En el eje Z se van a ir superponiendo los elementos según coincidan y según el orden en que se van agregando se van a ir superponiendo. Sin embargo, la superposición va a depender de varios factores. Los elementos static son elementos no posicionados, en cambio cuando es diferente la propiedad decimos que son posicionados. Por default se agregan de manera automática pero podemos personalizarlo (tanto negativo como positivo), también podemos personalizar tamaño del z-index.
+https://developer.mozilla.org/es/docs/Web/CSS/z-index
+
+8. Transiciones y animaciones
+Una pseudoclase CSS es una palabra clave que se añade a los selectores y que especifica un estado especial del elemento seleccionado. Por ejemplo,  :hover aplicará un estilo cuando el usuario haga hover sobre el elemento especificado por el selector.
+Las pseudoclases, junto con los pseudoelementos, permiten aplicar un estilo a un elemento no sólo en relación con el contenido del árbol de documento, sino también en relación a factores externos como el historial del navegador (:visited, por ejemplo), el estado de su contenido (como :checked en algunos elementos de formulario), o la posición del ratón (como :hover que permite saber si el ratón está encima de un elemento o no).
+https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes
+https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-elements

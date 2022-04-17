@@ -1,0 +1,37 @@
+body {
+    background-color: #cccccc;
+    /*
+    background-image: url(assets/patron1.jpg); 
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    background-position: left bottom;
+    */
+    color: black;
+    text-align: justify;
+}
+
+#caja {
+    border: 5px solid black;
+    padding: 10px;
+    background-color: rgb(94, 131, 212);
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    line-height: 50px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    vertical-align: middle;
+}
+
+h2 {
+    color: red;
+    background: white;
+    border: 5px solid red;
+}
+
+p {
+    text-indent: 15px;
+    word-spacing: 10px;
+    letter-spacing: 2px;
+}

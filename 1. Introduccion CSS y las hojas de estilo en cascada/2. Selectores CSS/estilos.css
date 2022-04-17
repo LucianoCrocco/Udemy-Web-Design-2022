@@ -1,0 +1,98 @@
+/*Selector universal*/ 
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*Selector de etiqueta*/ 
+h1{
+   text-decoration: underline; 
+   background-color: red;
+   color: white;
+   padding: 10px;
+   max-width: fit-content;
+   border-radius: 15px;
+}
+a {
+    font-size: 1.2rem;
+    color: crimson;
+    text-decoration: none;
+}
+
+a:hover{
+    color: brown;
+}
+
+footer a {
+    color: red;
+}
+
+/*Selector de id*/ 
+#descripcion, #titulo {
+    border: 2px solid blue;
+    padding: 0px 20px;
+    border-radius: 10px;
+}
+
+#titulo {
+    background-color: darkblue;
+    border: 2px dashed red;
+}
+
+/*Selector clase*/ 
+.parrafo {
+    font-style: italic;
+    font-weight: bold;
+}
+
+.parrafo1, .parrafo3 {
+    background-color: green;
+    color: white;
+    padding: 3px;
+}
+
+.parrafo3{
+    background-color: orange;
+    color: darkblue;
+}
+
+/*Selector de atributo*/ 
+#usuario form {
+    border: 5px solid blue;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 5px;
+}
+
+#usuario form * {
+    display: block;
+}
+
+input[type="text"]{
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 30%;
+}
+
+input[type="submit"]{
+    background: green;
+    color: white;
+    padding: 15px;
+    font-size: 17px;
+    text-transform: uppercase;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+/*Selector hijo*/ 
+#menu > li > ul > li > a{
+    color: blue;
+}
+
+/*Prioridad*/
+#saludo h1 {
+    background-color: brown;
+}
+
+h1 {
+    background-color: purple !important;
+}
