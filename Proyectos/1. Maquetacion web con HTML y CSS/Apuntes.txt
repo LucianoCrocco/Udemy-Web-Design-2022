@@ -1,0 +1,5 @@
+Objetivos del proyecto
+
+1. De PSD a HTML y CSS -> PSD: De una imagen al maqueteado CSS.
+2. Unir todo lo visto de la seccion Introductoria a CSS y hojas de estilo.
+3. Maqueteado de una web completa

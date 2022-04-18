@@ -22,8 +22,11 @@ El nivel de especificidad ira de CSS->nivel de página->nivel de etiqueta o sele
 
 3. Fuentes y colores
 Fuentes externas: https://fonts.google.com/ -> Google o cualquier otra pagina nos va a proporcionar un import CSS o un link HTML y la familia para aplicarle la fuente en el CSS.
+
 Si descargamos una fuente y la importamos a nuestro archivo debemos utilizar la propiedad @font-face {font-family: NOMBRE_FAMILIA; src: url(PATH_RELATIVO);}
 La propiedad font-family nos permite cambiar la familia de fuentes que queremos que despliegue el navegador. Es imporante que en caso que una fuente falle por motivo X tengamos una lista, ya que si falla en cargar la siguiente declarada en el font family se intentara cargar.
+Puedo indicar dentro del font family el font-weight y font-style para esta fuente.
+Puedo tener mas de un src para cargar la fuente al font face, en caso de que falle una cargue continua con el siguiente src. 
 
 Tenemos varios tipos de escalas para el font-size. Las mas utilizadas son px, em y %. 
 1 em = 16px.
@@ -80,8 +83,31 @@ Hasta ahora trabajamos con el eje de X (horizontal) y el eje Y (vertical). El ej
 En el eje Z se van a ir superponiendo los elementos según coincidan y según el orden en que se van agregando se van a ir superponiendo. Sin embargo, la superposición va a depender de varios factores. Los elementos static son elementos no posicionados, en cambio cuando es diferente la propiedad decimos que son posicionados. Por default se agregan de manera automática pero podemos personalizarlo (tanto negativo como positivo), también podemos personalizar tamaño del z-index.
 https://developer.mozilla.org/es/docs/Web/CSS/z-index
 
-8. Transiciones y animaciones
+8. Pseudoclases, transiciones, animaciones
 Una pseudoclase CSS es una palabra clave que se añade a los selectores y que especifica un estado especial del elemento seleccionado. Por ejemplo,  :hover aplicará un estilo cuando el usuario haga hover sobre el elemento especificado por el selector.
 Las pseudoclases, junto con los pseudoelementos, permiten aplicar un estilo a un elemento no sólo en relación con el contenido del árbol de documento, sino también en relación a factores externos como el historial del navegador (:visited, por ejemplo), el estado de su contenido (como :checked en algunos elementos de formulario), o la posición del ratón (como :hover que permite saber si el ratón está encima de un elemento o no).
 https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes
 https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-elements
+
+Para generar una transicion vamos a utilizar la propiedad transition: PROPIEDAD_CSS TIEMPO;
+https://developer.mozilla.org/es/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions
+
+
+Las animaciones se pueden lanzar de manera infinita, añadiendo o quitando una clase al elemento HTML, etc.
+Las animaciones estan basadas en keyframes. Van del punto 0 al punto 100.
+Para generar keyframes utilizamos el metodo CSS kreyframe.  Ejemplo:
+@keyframes nombre {
+    from {PROPIEDADES CON LAS QUE EMPIEZA}
+    to {PROPIEDADES CON LAS QUE TERMINA}
+    ------ O PUEDO TAMBIEN UTILIZAR PORCENTAJES ------
+    0%{PROPIEDADES AL 0% DEL TIEMPO}
+    50%{PROPIEDADES AL 50% DEL TIEMPO}
+    100%{PROPIEDADES AL 100% DEL TIEMPO}
+} 
+Puedo combinar from(0%) y to(100%) con porcentajes. 
+animation-name: NOMBRE; -> Asignamos la animacion al elemento CSS
+animation-duration: TIEMPO; -> Tiempo que dura la animacion desde el from hasta finalizar el to.
+animation-iteration-count: CANTIDAD/infinite; -> Indico la cantidad de veces que vamos a repetir la animacion o si la queres hacer infinita.
+animation-timing-function: COMPORTAMIENTO; -> Cambio el comportamiento de como se va a comportar el CSS. Por ejemplo si quiero que arranque y finalice lento, y en el medio ir rapido, tomar el tiempo de la misma manera para arrancar, ir y terminar, etc.
+
+https://developer.mozilla.org/es/docs/Web/CSS/CSS_Animations/Using_CSS_animations
