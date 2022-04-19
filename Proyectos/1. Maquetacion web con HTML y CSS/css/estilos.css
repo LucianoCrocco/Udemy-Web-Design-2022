@@ -20,6 +20,63 @@ body{
     background-repeat: repeat;
 }
 
+/*Formularios -> generico*/
+input[type ="text"],
+input[type ="password"]{
+    border: 1px solid #c9c9c9;
+    box-shadow: 0px 0px 2px #ccc inset;
+    background-color: white;
+    padding: 2px 1px;
+    color: gray;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus{
+    border: 1px solid #70b231;
+    color: black;
+}
+
+input[type="submit"]{
+    border-radius: 3px;
+    background-color: #70b231;
+    border: 1px solid green;
+    cursor: pointer;
+    color: white;
+    padding: 3px 10px;
+}
+
+input[type="submit"]:hover{
+    box-shadow: 0px 0px 2px gray;
+}
+
+input[type="submit"]:active{
+    box-shadow: 0px 0px 3px gray inset;
+    text-shadow: 0px 0px 3px #ccc;
+}
+
+/*Enlaces -> generico*/
+a {
+    color: #529125;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #529125;
+}
+
+a:hover {
+    color: #285616;
+}
+
+/*Estilos generales*/
+.red {
+    color: #9b2422 !important;
+}
+
+.blue {
+    color: #0c73f2 !important;
+}
+
 /*Cabecera*/
 #cabecera{
     width: 100%;
@@ -142,7 +199,89 @@ body{
 
 #nav > ul > li > ul > li:hover {
     box-shadow: 0px 0px 6px #ccc inset;
+    background-color: rgb(238, 237, 237);
     transition: all 350ms;
 }
 
-/*Barra Lateral*/
+/*Contenido central*/
+#contenido {
+    width: 1250px;
+    min-height: 1100px;
+    margin: auto;
+}
+
+/*Barra lateral*/
+#aside, #frase{
+    clear: both;
+    width: 200px;
+    float: left;
+    margin: 30px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 2px #ccc;
+    font-family: sans-serif, Arial, Helvetica;
+}
+
+#frase {
+    padding: 10px;
+    font-size: 14px;
+    font-family: sans-serif;
+    width: 180px;
+}
+
+#aside .widget{
+    width: 180px;
+    margin: 5px auto;
+    padding: 8px 10px;
+    font-size: 14px;
+    border-bottom: 1px dashed #333333;
+}
+
+#aside .widget:last-child{
+    border: none;
+}
+
+#aside h3{
+    background-color: #f2f3f2;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    color: #333333;
+    margin-bottom: 15px;
+    padding: 2px 0px;
+    text-align: center;
+    width: 100%;
+}
+
+/*Barra lateral -> Formularios*/
+#aside article label,
+#aside article input[type="text"],
+#aside article input[type="password"]{
+    display: block;
+    width: 95%;
+    margin-top: 5px;
+    margin-bottom: 2px;
+}
+
+#aside article a{
+    display: inline-block;
+    margin: auto;
+}
+
+
+#aside article input[type="submit"]{
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+#aside input,
+#aside label {
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+#aside li {
+    margin-bottom: 5px;
+    margin-left: 20px;
+    list-style: square;
+}

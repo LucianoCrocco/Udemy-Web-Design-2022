@@ -49,27 +49,131 @@
     </nav>
     <!--Fin del menu-->
 
-    <div class="contenido">
-        <section id="contenido-principal">
-            <article class="caja-contenido"></article>
-    
-            <article class="caja-contenido"></article>
-    
-            <article class="caja-contenido"></article>
-    
-            <a href="#">[Ver historico de noticias]</a>
-        </section>
-    
-        <aside>
-            <article class="barra-lateral"></article>
-    
-            <article class="frase-del-dia"></articlec>
-        </aside>
-    </div>
-    
+    <!--Inicio contenido central-->
+    <main id="contenido">
+        <!--Contenido lateral principal-->
+        <aside id="aside">
+            <!--Entrar a la web-->
+            <article id="login" class="widget">
+                <h3>Entrar a la web</h3>
+                <form>
+                    <label>
+                        Usuario:
+                        <input type="text" name="nombre">
+                    </label>
+                    <label>
+                        Contraseña:
+                        <input type="password" name="contrasenia">
+                    </label>
+                    <input type="submit" value="Entrar">
+                </form>
+                <a href="#">Zona Almuno</a>
+                <a href="#">Zona del Profesores</a>
+                <a href="#">Acceso a calificaciones</a>
+            </article>
+            <!--Fin entrar a la web-->
 
+            <!--Entrar a la aula virtual 1-->
+            <article id="aula-virtual-1" class="widget">
+                <h3 class="blue">Aula virtual 1</h3>
+                <form>
+                    <label>
+                        Nombre de usuario
+                        <input type="text" name="nombre">
+                    </label>
+                    <label>
+                        Contraseña
+                        <input type="password" name="contrasenia">
+                    </label>
+                    <input type="submit" value="Entrar">
+                </form>
+            </article>
+            <!--Fin entrar a la aula virtual 1-->
+
+            <!--Entrar a la aula virtual 2-->
+            <article id="aula-virtual-2" class="widget">
+                <h3 class="red">Aula virtual 2</h3>
+                <form>
+                    <label>
+                        Nombre de usuario
+                        <input type="text" name="nombre">
+                    </label>
+                    <label>
+                        Contraseña
+                        <input type="password" name="contrasenia">
+                    </label>
+                    <input type="submit" value="Entrar">
+                </form>
+            </article>
+            <!--Fin entrar a la aula virtual -->
+    
+            <!--Enlaces de interes-->
+            <article id="enlaces-de-interes" class="widget">
+                <h3>Enlaces de interes</h3>
+                <ul>
+                    <li><a href="#">Master en JavaScript</a></li>
+                    <li><a href="#">Master en PHP</a></li>
+                    <li><a href="#">Master en Frameworks JS</a></li>
+                    <li><a href="#">Master en webs full-stack</a></li>
+                </ul>
+            </article>
+            <!--Fin de enlaces de interes-->
+        </aside>
+        <!--Fin contenido lateral principal-->
+
+        <!--Contenido lateral frase-->
+        <aside id="frase">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio voluptate veniam a assumenda unde amet deserunt. Nam optio, repellat beatae sint, rem culpa blanditiis quod placeat vero necessitatibus quo quis.
+            <a href="#">Leer mas frases</a>
+        </aside>
+        <!--Fin contenido lateral frase-->
+        <!--Fin contenido lateral-->
+
+        <!--Contenido principal-->
+        <div id="contenido-principal">
+            <!--Noticias front-end-->
+            <section class="caja-contenido">
+                <h2 class="titulo">Noticias front-end</h2>
+                <article class="article">
+                    <p>
+                        <a href="#">Titulo de la entrada</a>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, quod laboriosam? Quod voluptatem nihil minima, odio repudiandae ab unde sapiente? Cum eligendi iure ex sed facilis unde laborum, explicabo, delectus voluptatem fuga nihil. Incidunt ullam aliquam voluptatibus soluta! A exercitationem optio fuga soluta temporibus dolores distinctio ducimus sed nesciunt dignissimos.
+                    </p>
+                    <span class="date">[18/4/2022. Victor Robles Web]</span>
+                </article>
+                <article class="article">
+                    <p>
+                        <a href="#">Titulo de la entrada</a>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, quod laboriosam? Quod voluptatem nihil minima, odio repudiandae ab unde sapiente? Cum eligendi iure ex sed facilis unde laborum, explicabo, delectus voluptatem fuga nihil. Incidunt ullam aliquam voluptatibus soluta! A exercitationem optio fuga soluta temporibus dolores distinctio ducimus sed nesciunt dignissimos.
+                    </p>
+                    <span class="date">[18/4/2022. Victor Robles Web]</span>
+                </article>
+                <article class="article">
+                    <p>
+                        <a href="#">Titulo de la entrada</a>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, quod laboriosam? Quod voluptatem nihil minima, odio repudiandae ab unde sapiente? Cum eligendi iure ex sed facilis unde laborum, explicabo, delectus voluptatem fuga nihil. Incidunt ullam aliquam voluptatibus soluta! A exercitationem optio fuga soluta temporibus dolores distinctio ducimus sed nesciunt dignissimos.
+                    </p>
+                    <span class="date">[18/4/2022. Victor Robles Web]</span>
+                </article>
+                <article class="article">
+                    <p>
+                        <a href="#">Titulo de la entrada</a>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, quod laboriosam? Quod voluptatem nihil minima, odio repudiandae ab unde sapiente? Cum eligendi iure ex sed facilis unde laborum, explicabo, delectus voluptatem fuga nihil. Incidunt ullam aliquam voluptatibus soluta! A exercitationem optio fuga soluta temporibus dolores distinctio ducimus sed nesciunt dignissimos.
+                    </p>
+                    <span class="date">[18/4/2022. Victor Robles Web]</span>
+                </article>
+            </section>
+            <!--Fin noticias front-end-->
+            <a href="#">[Ver historico de noticias]</a>
+        </div>
+        <!--Fin contenido principal-->
+    </main>
+    <!--Fin del contenido central-->
+    
+    <!--Footer-->
     <footer id="footer">
 
     </footer>
+    <!--Fin del footer-->
 </body>
 </html>
