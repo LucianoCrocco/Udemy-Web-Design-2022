@@ -5,10 +5,28 @@
     src: url(../assets/fonts/nevis.eot?#iefix) format('embedded-opentype'),
     url(../assets/fonts/nevis.woff) format('woff'),
     url(../assets/fonts/nevis.ttf) format('truetype'),
-    url(../assets/fonts/nevis.svg) format('svb');
+    url(../assets/fonts/nevis.svg) format('svg');
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: "fjalla";
+    src: url(../assets/fonts/FjallaOne-Regular.ttf) format(truetype);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "icons";
+    src: url(../assets/fonts/websymbols-regular-webfont.svg#WebSymbolRegular),
+    url(../assets/fonts/websymbols-regular-webfont.woff) format('woff'),
+    url(../assets/fonts/websymbols-regular-webfont.ttf) format('truetype'),
+    url(../assets/fonts/websymbols-regular-webfont.eot) format('eot'),
+    url(../assets/fonts/websymbols-regular-webfont.eot?#iefix) format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 /*Estilos generales*/
 * {
@@ -23,11 +41,11 @@ body{
 /*Formularios -> generico*/
 input[type ="text"],
 input[type ="password"]{
+    background-color: white;
     border: 1px solid #c9c9c9;
     box-shadow: 0px 0px 2px #ccc inset;
-    background-color: white;
-    padding: 2px 1px;
     color: gray;
+    padding: 2px 1px;
 }
 
 input[type="text"]:focus,
@@ -68,7 +86,7 @@ a:hover {
     color: #285616;
 }
 
-/*Estilos generales*/
+/*Colores*/
 .red {
     color: #9b2422 !important;
 }
@@ -77,34 +95,54 @@ a:hover {
     color: #0c73f2 !important;
 }
 
+.orange {
+    color: #d69d2a;
+}
+
+/*Iconos*/
+.icon {
+    font-family: "icons";
+    float: left;
+    margin-right: 5px;
+    margin-top: -2px;
+}
+
+/*Limpieza*/
+.clearfix{
+    float: none;
+    clear: both;
+}
+
+/*-------------------------------------------------*/
+
 /*Cabecera*/
 #cabecera{
-    width: 100%;
     height: 250px;
+    width: 100%;
 }
 
 #cabecera > #logotipo {
-    width: 770px;
-    margin: auto;
     padding-top: 20px;
+    margin: auto;
+    width: 770px;
 }
 
 #cabecera > #logotipo > img{
     display: block;
-    text-align: center;
     margin: auto;
+    text-align: center;
     width: 140px;
 }
 
 #cabecera > h1{
     display: table;
-    margin: auto;
-    text-align: center;
     font-size: 40px;
     font-family: "nevis", Arial, Helvetica, sans-serif;
     margin-top: 10px;
-    text-transform: uppercase;
+    margin: auto;
     letter-spacing: 4px;
+    text-align: center;
+    text-transform: uppercase;
     text-shadow: 0px 2px 1px #333333;
     transition: all 300ms;
 }
@@ -114,31 +152,34 @@ a:hover {
 }
 
 #cabecera > h1 > a{
-    text-decoration: none;
     color: #70b231;
+    text-decoration: none;
 }
+
+/*-------------------------------------------------*/
 
 /*Barra de navegacion*/
 #nav {
-    width: 100%;
     background-color: #333333;
+    box-shadow: 0px 0px 2px grey;
     color: white;
-    height: 40px;
     font-family: sans-serif, Helvetica, Arial;
     font-size: 14px;
-    box-shadow: 0px 0px 2px grey;
+    height: 40px;
+    width: 100%;
 }
 
 #nav ul {
+    margin: auto;
     list-style: none;
     text-decoration: none;
-    margin: auto;
     width: 1130px;
 }
 
 #nav > ul > li {
-    line-height: 38px;
+    margin: auto;
     float: left;
+    line-height: 38px;
 }
 
 #nav > ul > li:nth-child(1){
@@ -163,19 +204,19 @@ a:hover {
 
 #nav a {
     display: block;
-    text-decoration: none;
     color: white;
+    text-decoration: none;
     padding: 1px 20px;
 }
 
 /*Menus desplegables*/
 #nav > ul > li > ul {
     display: none;
+    box-shadow: 0px 2px 2px grey;
+    max-width: 160px;
     position: absolute;
     text-align: left;
-    max-width: 160px;
     overflow-x: auto;
-    box-shadow: 0px 2px 2px grey;
     z-index: 1;
 }
 
@@ -186,8 +227,8 @@ a:hover {
 #nav > ul > li > ul > li{
     background-color: #F2F1F0;
     border-bottom: 1px solid #D6D6D6;
-    line-height: 25px;
     font-size: 14px;
+    line-height: 25px;
 }
 #nav > ul > li > ul > li > a{
     color: #666666;
@@ -203,38 +244,40 @@ a:hover {
     transition: all 350ms;
 }
 
+/*-------------------------------------------------*/
+
 /*Contenido central*/
 #contenido {
-    width: 1250px;
-    min-height: 1100px;
     margin: auto;
+    min-height: 1100px;
+    width: 1250px;
 }
+
 
 /*Barra lateral*/
 #aside, #frase{
-    clear: both;
-    width: 200px;
-    float: left;
-    margin: 30px;
     background-color: white;
     border: 1px solid #ccc;
     box-shadow: 0px 2px 2px #ccc;
     font-family: sans-serif, Arial, Helvetica;
+    float: left;
+    margin: 30px;
+    width: 200px;
 }
 
 #frase {
-    padding: 10px;
     font-size: 14px;
     font-family: sans-serif;
+    padding: 10px;
     width: 180px;
 }
 
 #aside .widget{
-    width: 180px;
-    margin: 5px auto;
-    padding: 8px 10px;
     font-size: 14px;
     border-bottom: 1px dashed #333333;
+    margin: 5px auto;
+    padding: 8px 10px;
+    width: 180px;
 }
 
 #aside .widget:last-child{
@@ -257,9 +300,9 @@ a:hover {
 #aside article input[type="text"],
 #aside article input[type="password"]{
     display: block;
-    width: 95%;
     margin-top: 5px;
     margin-bottom: 2px;
+    width: 95%;
 }
 
 #aside article a{
@@ -284,4 +327,83 @@ a:hover {
     margin-bottom: 5px;
     margin-left: 20px;
     list-style: square;
+}
+
+
+/*Contenido principal*/
+#contenido-principal{
+    float: right;
+    font-family: sans-serif, Arial, Helvetica;
+    margin-right: 20px;
+    width: 75%;
+}
+
+#contenido-principal .titulo {
+    border-bottom: 1px solid #ccc;
+    font-size: 25px;
+    font-family: "fjalla";
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: -20px;
+    letter-spacing: 1px;
+    padding: 20px 0px;
+    text-align: center;
+}
+
+#contenido-principal .caja-contenido {
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 4px #c9c9c9;
+    color: #333333;
+    font-size: 16px;
+    margin-top: 40px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+#contenido-principal .article {
+    margin: 20px 10px;
+}
+
+.article .date {
+    color: gray;
+    font-size: 14px;
+}
+
+.caja-contenido .stickerOne,
+.caja-contenido .stickerTwo
+{
+    position: absolute;
+    margin-top: -38px;
+    z-index: 0;
+}
+
+.caja-contenido .stickerTwo{
+    margin-left: 860px;
+}
+
+/*-------------------------------------------------*/
+
+/*Link inferior */
+#history {
+    float: right;
+    font-family: sans-serif, Arial, Helvetica;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+/*-------------------------------------------------*/
+
+/*Footer*/
+#footer {
+    background-color: #333;
+    box-shadow: 0px 0px 2px gray;
+    color: white;
+    margin: auto;
+    margin-top: 40px;
+    font-family: sans-serif, Arial, Helvetica;
+    font-size: 14px;
+    padding: 10px 0px;
+    text-align: center;
+    width: 100%;
 }

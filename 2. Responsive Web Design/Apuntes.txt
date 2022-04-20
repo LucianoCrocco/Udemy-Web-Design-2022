@@ -1,0 +1,15 @@
+Responsive Web Design
+
+¿Que es el Responsive?
+Maquetación con porcentajes
+Media queris
+Viewport
+Adaptar web a cualquier pantalla
+Proyecto Completo
+
+
+1. ¿Que es el Responsive Web Design o el Diseño Web Adaptable?
+https://es.wikipedia.org/wiki/Dise%C3%B1o_web_adaptable
+El Responsive Web Design consiste de tecnicas para que los estilos sean capaces de adaptarse a cualquier tipo de pantalla.
+
+2. Maquetación en porcentajes
