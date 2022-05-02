@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master en CSS</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="shortcut icon" href="./assets/img/supertux.png" type="image/x-icon">
+</head>
+<body>
+    <!--CABECERA-->
+    <header id="header">
+        <!--Inicio barra de navegacion - wrap-->
+        <div class="wrap">
+            <!--LOGO Y TEXTO-->
+            <div id="logo">
+                <span class="gear">S</span>
+                <h3>BLOG</h3>
+            </div>
+            <!--FIN LOGO Y TEXTO-->
+            <!--MENU-->
+            <nav id="menu">
+                <ul>
+                    <li><a href="#">INICIO</a></li>
+                    <li><a href="#">BLOG</a></li>
+                    <li><a href="#">FORMACIÓN</a></li>
+                    <li><a href="#">CONTACTO</a></li>
+                </ul>
+            </nav>
+            <!--FIN MENU-->
+        </div>
+        <!--Fin barra de navegacion - wrap-->
+    </header>
+    <!--FIN CABECERA-->
+
+    <!--CONTENIDO PRINCIPAL-->
+    <main class="wrap"> 
+        <!--Inicio banner y tarjetas-->
+        <section>
+            <!--Inicio banner-->
+            <article id="banner"> 
+                <h1>Curso de Desarrollo Web - Maquetación web avanzada</h1>
+            </article>
+            <!--Fin banner-->
+
+            <!--Inicio tarjetas-->
+            <article id="cards">
+                <div class="card">
+                    <p class="icon">H</p>
+                    <h2 class="category darkblue">Desarrollo Web</h2>
+                    <p class="description darkblue">Aprende los principales lenguajes para desarrollar webs ¡Conviertete en un webmaster!</p>
+                </div>
+                <div class="card">
+                    <p class="icon">_</p>
+                    <h2 class="category darkblue">Sistemas Operativos</h2>
+                    <p class="description darkblue">Aprende a administrar sistemas Linux y Windows</p>
+                </div>
+                <div class="card">
+                    <p class="icon">S</p>
+                    <h2 class="category darkblue">Hardware</h2>
+                    <p class="description darkblue">Conoce los entresijos del hardware.</p>
+                </div>
+                <div class="card">
+                    <p class="icon">u</p>
+                    <h2 class="category darkblue">Redes e internet</h2>
+                    <p class="description darkblue">Aprende a configurar y administrar redes informaticas y servidores.</p>
+                </div>
+                <div class="card">
+                    <p class="icon">a</p>
+                    <h2 class="category darkblue">Base de datos</h2>
+                    <p class="description darkblue">Aprende a montar y administar base de datos.</p>
+                </div>
+            </article>
+            <!--Fin tarjetas-->
+        </section>
+        <!--Fin banner y tarjetas-->
+
+        <!--Inicio barra lateral-->
+        <aside id="aside">
+            <h3 class="box-title">BUSCAR</h3>
+            <div id="search">
+                <form>
+                    <input type="text">
+                    <input type="button" value="L" class="icon">
+                </form>
+            </div>
+
+            <h3 class="box-title">LOGIN</h3>
+            <div id="login" class="aside-box">
+                <label id="user-email-form"class="icon" for="user-email">U</label>
+                <input type="email" name="user-email">
+
+                <label id="password-form" class="icon" for="password">w</label>
+                <input type="password" name="password">
+
+                <input type="submit" value="Entrar">
+                <input type="reset" value="Limpiar">
+
+                <a href="#">Registrate aquí</a>
+                <a href="#">¿Has olvidado tu contraseña?</a>
+            </div>
+
+            <h3 class="box-title">REDES SOCIALES</h3>
+            <div id="social-media" class="aside-box">
+                <article class="twitter">
+                    <a href="#" class="icon">t</a>
+                </article>
+                <article class="facebook">
+                    <a href="#" class="icon">f</a>
+                </article>
+                <article class="youtube">
+                    <a href="#" class="icon">y</a>
+                </article>
+            </div>
+
+            <h3 class="box-title">COLABORADORES</h3>
+            <div id="colaborations" class="aside-box"></div>
+        </aside>
+        <!--Fin barra lateral-->
+
+        <!--Articulos-->
+        <section id="articles">
+            <h2 class="box-title articles-box">Últimos articulos</h2>
+            <article>
+                <div class="data">
+                    <span>Fecha: 28 de abr</span>
+                    <span>Categoría: Pruebas</span>
+                </div>
+                <h4>
+                    <a href="#">Titulo del articulo</a>
+                </h4>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus voluptatem deleniti consequuntur corrupti quaerat eligendi, impedit blanditiis facere aliquid tenetur quia ad a labore esse possimus saepe est aspernatur aperiam cum mollitia veniam corporis laudantium tempore similique! Voluptate eveniet eos optio ab consectetur harum a voluptatem quidem, hic neque magnam libero sequi laborum dolorum delectus minus ad praesentium aperiam officia ut nemo doloribus dolores alias? Autem quos, animi eligendi sequi officiis, eos fuga dicta veniam dignissimos possimus architecto obcaecati, facilis totam nemo quo dolores qui accusantium similique. Provident non, dolore aspernatur sapiente, ratione consectetur atque minima exercitationem ea officia deleniti.</p>
+            </article>
+            <article>
+                <div class="data">
+                    <span>Fecha: 28 de abr</span>
+                    <span>Categoría: Pruebas</span>
+                </div>
+                <h4>
+                    <a href="#">Titulo del articulo</a>
+                </h4>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus voluptatem deleniti consequuntur corrupti quaerat eligendi, impedit blanditiis facere aliquid tenetur quia ad a labore esse possimus saepe est aspernatur aperiam cum mollitia veniam corporis laudantium tempore similique! Voluptate eveniet eos optio ab consectetur harum a voluptatem quidem, hic neque magnam libero sequi laborum dolorum delectus minus ad praesentium aperiam officia ut nemo doloribus dolores alias? Autem quos, animi eligendi sequi officiis, eos fuga dicta veniam dignissimos possimus architecto obcaecati, facilis totam nemo quo dolores qui accusantium similique. Provident non, dolore aspernatur sapiente, ratione consectetur atque minima exercitationem ea officia deleniti.</p>
+            </article>
+            <article>
+                <div class="data">
+                    <span>Fecha: 28 de abr</span>
+                    <span>Categoría: Pruebas</span>
+                </div>
+                <h4>
+                    <a href="#">Titulo del articulo</a>
+                </h4>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus voluptatem deleniti consequuntur corrupti quaerat eligendi, impedit blanditiis facere aliquid tenetur quia ad a labore esse possimus saepe est aspernatur aperiam cum mollitia veniam corporis laudantium tempore similique! Voluptate eveniet eos optio ab consectetur harum a voluptatem quidem, hic neque magnam libero sequi laborum dolorum delectus minus ad praesentium aperiam officia ut nemo doloribus dolores alias? Autem quos, animi eligendi sequi officiis, eos fuga dicta veniam dignissimos possimus architecto obcaecati, facilis totam nemo quo dolores qui accusantium similique. Provident non, dolore aspernatur sapiente, ratione consectetur atque minima exercitationem ea officia deleniti.</p>
+            </article>
+            <article>
+                <div class="data">
+                    <span>Fecha: 28 de abr</span>
+                    <span>Categoría: Pruebas</span>
+                </div>
+                <h4>
+                    <a href="#">Titulo del articulo</a>
+                </h4>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus voluptatem deleniti consequuntur corrupti quaerat eligendi, impedit blanditiis facere aliquid tenetur quia ad a labore esse possimus saepe est aspernatur aperiam cum mollitia veniam corporis laudantium tempore similique! Voluptate eveniet eos optio ab consectetur harum a voluptatem quidem, hic neque magnam libero sequi laborum dolorum delectus minus ad praesentium aperiam officia ut nemo doloribus dolores alias? Autem quos, animi eligendi sequi officiis, eos fuga dicta veniam dignissimos possimus architecto obcaecati, facilis totam nemo quo dolores qui accusantium similique. Provident non, dolore aspernatur sapiente, ratione consectetur atque minima exercitationem ea officia deleniti.</p>
+            </article>
+            <article>
+                <div class="data">
+                    <span>Fecha: 28 de abr</span>
+                    <span>Categoría: Pruebas</span>
+                </div>
+                <h4>
+                    <a href="#">Titulo del articulo</a>
+                </h4>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus voluptatem deleniti consequuntur corrupti quaerat eligendi, impedit blanditiis facere aliquid tenetur quia ad a labore esse possimus saepe est aspernatur aperiam cum mollitia veniam corporis laudantium tempore similique! Voluptate eveniet eos optio ab consectetur harum a voluptatem quidem, hic neque magnam libero sequi laborum dolorum delectus minus ad praesentium aperiam officia ut nemo doloribus dolores alias? Autem quos, animi eligendi sequi officiis, eos fuga dicta veniam dignissimos possimus architecto obcaecati, facilis totam nemo quo dolores qui accusantium similique. Provident non, dolore aspernatur sapiente, ratione consectetur atque minima exercitationem ea officia deleniti.</p>
+            </article>
+            <article id="blog">
+                <a href="#">Ir al blog</a>
+            </article>
+        </section>
+        <!--Fin articulos-->
+    </main>
+    <!--FIN CONTENIDO PRINCIPAL-->
+
+    <div class="clearfix"></div>
+    
+    <!--FOOTER-->
+    <footer id="footer">
+        <section class="wrap">
+
+            <nav id="menu-footer" class="footer-boxes">
+                <h5 class="box-title footer-box">MENÚ</h5>
+                <ul>
+                    <li><a href="#">INICIO</a></li>
+                    <li><a href="#">BLOG</a></li>
+                    <li><a href="#">FORMACIÓN</a></li>
+                    <li><a href="#">CONTACTO</a></li>
+                </ul>
+            </nav>
+
+            <article id="location" class="footer-boxes">
+                <h5 class="box-title footer-box">¿Donde estamos?</h5>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105073.4436693023!2d-58.503337953569314!3d-34.61566245897794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3b4ef90cbd%3A0xa0b3812e88e88e87!2sBuenos%20Aires%2C%20CABA!5e0!3m2!1ses!2sar!4v1651182420299!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </article>
+
+            <section id="info" class="footer-boxes">
+                <article>
+                    <h5 class="box-title footer-box">Desarrollado con</h5>
+                    <p><img src="./assets/img/html5-badge-h-css3-graphics-multimedia-performance-semantics.png" alt="Creado con HTML y CSS"></p>
+                </article>
+                <article>
+                    <h5 class="box-title footer-box">Optimizado para</h5>
+                    <p id="browsers">
+                        <a href="#"><img src="./assets/img/firefox-icon.png" alt="Firefox"></a>
+                        <a href="#"><img src="./assets/img/chrome.png" alt="Chrome"></a>
+                        <a href="#"><img src="./assets/img/Opera_256x256.png" alt="Opera"></a>
+                        <a href="#"><img src="./assets/img/safari.png" alt="Safari"></a>
+                        <a href="#"><img src="./assets/img/android.png" alt="Android"></a>
+                        <a href="#"><img src="./assets/img/ios.png" alt="iOS"></a>
+                    </p>
+                </article>
+                <article>
+                    <h5 class="box-title footer-box">Autor</h5>
+                    <p>&copy; Luciano Agustin Crocco</p>
+                </article>
+            </section>
+
+        </section>
+    </footer>
+    <!--FIN FOOTER-->
+</body>
+</html>

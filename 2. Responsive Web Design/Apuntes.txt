@@ -9,7 +9,18 @@ Proyecto Completo
 
 
 1. ¿Que es el Responsive Web Design o el Diseño Web Adaptable?
-https://es.wikipedia.org/wiki/Dise%C3%B1o_web_adaptable
+Definicion: https://es.wikipedia.org/wiki/Dise%C3%B1o_web_adaptable
 El Responsive Web Design consiste de tecnicas para que los estilos sean capaces de adaptarse a cualquier tipo de pantalla.
 
 2. Maquetación en porcentajes
+Para maquetear tengo que pensar en las cajas/containers como porcentajes y no como pixeles porque un porcentaje es adaptado/se adapta al tamaño de la caja que lo cotiene, en cambio los pixeles son fijos. El porcentaje puede variar con respecto al elemento padre que lo contiene, con pixeles no.
+
+3. Media queries
+Lo importante del responsive es capturar los puntos de corte (ancho x largo en px) sobre los cuales  se produce un cambio visual muy marcado y partir de ahi asiganrle estilos. Cuando hablamos de cambio hablamos a que el viewport llegue a cierto punto en el cual los elementos se vuelven ilegibles, no tiene un comportamiento adecuado, visualmente no nos gusta, etc.
+Los media queries de declaran con @media(){} y le pasamos, por ejemplo, un max-width para que sepa que si el max es menor a esos px se ejecute este nuevo CSS. Entre las llaves llamamos a nuestros estilos y sobre escribimos los elementos que deseamos cambiar.
+Para combinar mas de una condicion utilizamos el operador and y agregamos unos nuevos ().
+
+4. Viewport
+El viewport es la pantalla disponible del total del monitor. Por ejemplo la barra de tareas, pestañas, favoritos, etc. No son parte del viewport, es todo lo que el HTML renderiza.
+La etiqueta <meta name="viewport" content="width=device-width, initial-scale=1.0"> vamos a poder implementar media queries segun el width de la pantalla donde se encuentre. Ademas podemos inidcarle la escala con la que empieza, en el ejemplo el initial scale x1.0, o sea, escala normal.
+Para deshabilitar el zoom con los dos dedos podemos utilizar "user-scalable=no".

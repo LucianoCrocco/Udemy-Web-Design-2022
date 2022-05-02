@@ -1,0 +1,90 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    transition: 300ms all;
+}
+
+.clearfix {
+    float: none;
+    clear: both;
+}
+
+header{
+    background-color: lightblue;
+    color: #333;
+    height: 150px;
+    line-height: 150px;
+    text-align: center;
+    width: 100%;
+}
+
+aside {
+    background-color: #ccc;
+    float: left;
+    line-height: 700px;
+    min-height: 700px;
+    text-align: center;
+    width: 25%;
+}
+
+#container {
+    background: red;
+    margin: 40px auto;
+    font-family: Helvetica, Arial, sans-serif;
+    width: 70%;
+}
+
+#articles {
+    background-color: lemonchiffon;
+    float: left;
+    min-height: 700px;
+    width: 75%;
+}
+
+#articles article {
+    background: green;
+    border: 2px solid white;
+    color: white;
+    float:  left;
+    height: 150px;
+    line-height: 150px;
+    margin: 10px;
+    text-align: center;
+    width: 30%;
+}
+
+/*Responsive*/
+/*Desde 0px hasta 915px de anchura se ejecutaran estos estilos*/
+@media (max-width: 915px) {
+    #articles article{
+        background-color: red;
+        transition: 500ms all;
+        width: 40%;
+    }
+}
+
+@media (max-width: 450px){
+    #articles article {
+        background-color: blue;
+        transition: 500ms all;
+        width: 90%;
+    }
+    #container {
+        font-size: 10px;
+    }
+    body{
+        background-color: lightsalmon;
+    }
+    #articles{
+        width: 100%;
+    }
+    aside {
+        float: none;
+        min-height: auto;
+        line-height: 40px;
+        width: 100%;
+    }
+    footer {
+        line-height: 40px;
+    }
+}

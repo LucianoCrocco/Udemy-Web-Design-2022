@@ -1,0 +1,8 @@
+Objetivos del proyecto
+
+1. Maquetación más avanzada.
+2. De PSD a HTML y CSS.
+3. Propiedad animation.
+4. Kreyframes.
+5. Transition.
+6. Creación de efectos.

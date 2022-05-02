@@ -1,0 +1,572 @@
+/*ESTILOS GENERALES*/
+
+    /*FUENTES PERSONALIZADAS*/
+@font-face {
+    font-family: "TrebuchetMS";
+    src: url("../assets/fonts/TrebuchetMS.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "BebasNeue";
+    src: url("../assets/fonts/BebasNeue.otf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "WebSymbolsRegular";
+    src: url("../assets/fonts/websymbols-regular-webfont.eot");
+    src:url("../assets/fonts/websymbols-regular-webfont.eot?#iefix") format('embedded-opentype'),
+        url("../assets/fonts/websymbols-regular-webfont.woff") format('woff'),
+        url("../assets/fonts/websymbols-regular-webfont.ttf") format('truetype'),
+        url("../assets/fonts/websymbols-regular-webfont.svg#WebSymbolsRegu") format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+    /*GENERALES*/
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    background: url("../assets/img/pattern.png") repeat;
+}
+.wrap {
+    margin: auto;
+    width: 1250px;
+}
+.gear, .icon {
+    font-family: "WebSymbolsRegular";
+}
+
+.darkblue{
+    color: #00538c;
+}
+
+.clearfix {
+    float: none;
+    clear: both;
+}
+
+.box-title{
+    background: url(../assets/img/pxgray.png), white;
+    box-shadow: 0px 1px 0px #393d3f, 1px 2px 0px #393d3f, 2px 3px 0px #393d3f, 3px 4px 0px #393d3f;
+    font-family: "BebasNeue";
+    font-size: 30px;
+    font-weight: normal;
+    height: 45px;
+    line-height: 48px;
+    letter-spacing: 2px;
+    margin: 30px 0px 30px 0px;
+    padding-left: 15px;
+    width: auto;
+}
+
+/*-----------------------------------------------------------------*/
+
+/*CABECERA*/
+
+#header {
+    background-color: black;
+    color: white;
+    font-family: "BebasNeue";
+    height: 70px;
+    width: 100%;
+}
+
+#logo {
+    background-color: #37bcf9;
+    float: left;
+    letter-spacing: 1px;
+    margin-top: 8px;
+    margin-left: 20px;
+    overflow: hidden;
+    text-align: center;
+    width: 200px;
+    transition: all 300ms;
+}
+#logo h3 {
+    float: right;
+    font-size: 40px;
+    margin-top: 5px;
+    margin-right: 65px;
+    transition: all 300ms;
+}
+#logo .gear {
+    display: block;
+    float: left;
+    font-size: 30px;
+    margin-top: 8px;
+    margin-left: 26px;
+
+    animation-name: rotate-gear;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#menu {
+    background-color: transparent;
+    float: right;
+    height: 70px;
+
+}
+#menu ul li {
+    display: inline-block;
+    font-size: 24px;
+    letter-spacing: 1px;
+    list-style: none;
+    margin: 20px 20px 0px 20px;
+    
+}
+#menu ul li a{
+    color: white;
+    display: block;
+    text-decoration: none;
+    transition: all 200ms;
+}
+
+/*-----------------------------------------------------------------*/
+
+/*BANNER*/
+
+    /*TITULO BOX*/
+#banner {
+    background-image: url(../assets/img/bakbaner.png);
+    background-position: -280px -144px;
+    border: 10px solid white;
+    box-shadow: 0px 0px 2px gray;
+    height: 100px;
+    margin: 20px auto;
+    width: 94.8%;
+}
+
+#banner > h1 {
+    color: white;
+    font-family: "BebasNeue";
+    font-size: 45px;
+    letter-spacing: 2px;
+    margin: 27px auto;
+    text-align: center;
+    text-shadow: 2px 2px 1px black;
+    width: 100%;
+}
+
+    /*TARJETAS*/
+
+#cards {
+    margin-left: 8px;
+}
+.card {
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 2px #ddd;
+    cursor: pointer;
+    float: left;
+    height: 305px;
+    margin: 40px 20px 20px;
+    overflow: hidden;
+    width: 205px;
+}
+
+.card:last-child {
+    margin-right: 0px;
+}
+
+.card .icon {
+    font-size: 50px;
+    height: 110px;
+    margin: 0px auto;
+    line-height: 130px;
+    text-align: center;
+    width: 100%;
+}
+
+.card .category {
+    font-family: "TrebuchetMS";
+    font-size: 21px;
+    font-weight: bold;
+    height: 50px;
+    margin-top: 25px;
+    text-align: center;
+    width: 100%;
+}
+
+.card .description {
+    font-family: "TrebuchetMS";
+    font-size: 15px;
+    text-align: center;
+}
+
+/*-----------------------------------------------------------------*/
+
+/*Barra lateral*/
+
+#aside{
+    float: right;
+    font-family: "TrebuchetMS";
+    margin: 20px;
+    min-height: 1200px;
+    width: 300px;
+}
+
+.aside-box{ 
+    background: white;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3), 0px 3px 7px rgba(0, 0, 0, 0.3), 0px 1px white inset, 0px -3px 2px rgba(0, 0, 0, 0.3) inset;
+    height: 240px;
+    margin: 0px auto;
+    margin-top: 20px;
+    padding-top: 2px;
+    width: 90%;
+}
+    /*BUSCAR E INPUTS*/
+#aside h3:first-child{
+    margin-top: 20px;
+}
+
+#search{
+    background-color: white;
+    border: 1px solic #ccc;
+    box-shadow: 1px 1px 4px #ccc inset;
+    border-radius: 5px;
+    height: 30px;
+    margin: 10px auto;
+    width: 90%;
+}
+
+#aside input[type="text"]{
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    color: #ccc;
+    height: 30px;
+    padding-left: 5px;
+    transition: all 300ms;
+    width: 85%;
+}
+
+#aside input[type="button"],
+#aside input[type="submit"]
+{
+    background-color: transparent;
+    border: none;
+    border-left: 1px solid #ccc;
+    color: #555;
+    cursor: pointer;
+    height: 30px;
+    font-size: 15px;
+    padding: 0px 7.3px;
+}
+
+#aside input[type="text"]:focus{
+    color: #555;
+}
+
+    /*LOGIN*/
+
+#login input[type="email"],
+#login input[type="password"] {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px #ccc inset;
+    color: gray;
+    display: block;
+    height: 30px;
+    margin: 0px auto;
+    margin-top: 20px;
+    padding-left: 30px;
+    width: 82%;
+}
+
+#login input[type="email"]:focus,
+#login input[type="password"]:focus {
+    box-shadow: 1px 1px 1px grey inset;
+    color: #555;
+}
+
+
+#login #user-email-form,
+#login #password-form {
+    margin-top: 27px;
+    margin-left: 20px;
+    position: absolute;
+    text-align: center;
+}
+
+#login #password-form {
+    margin-top: 29px;
+    margin-left: 25px;
+}
+
+#login input[type="button"],
+#login input[type="submit"],
+#login input[type="reset"],
+button
+{
+    color: white;
+    background: linear-gradient(to bottom, #3eb8e5 0%, #2ca0ca 100%);
+    border: 1px solid #156785;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "TrebuchetMS";
+    font-size: 15px;
+    font-weight: lighter;
+    height: 35px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100px;
+    transition: all 300ms;
+}
+
+#login input[type="reset"]{
+    margin-left: 25px;
+}
+
+#login input[type="button"]:hover,
+#login input[type="submit"]:hover,
+#login input[type="reset"]:hover,
+button:hover{
+    box-shadow: 0px 0px 3px grey;
+}
+
+#login a {
+    color: #555;
+    display: block;
+    font-size: 15px;
+    margin-left: 18px;
+    text-decoration: none;
+}
+
+#login a:hover {
+    color: #2f78bc;
+    text-decoration: underline;
+}
+
+    /*REDES SOCIALES*/
+
+#social-media {
+    height: 180px;
+    width: 70px;
+}
+
+#social-media a{
+    display: block;
+    color: #393d3f;
+    font-size: 30px;
+    margin: 10px 0px 20px 20px;
+    text-decoration: none;
+}
+
+/*-----------------------------------------------------------------*/
+
+/*Articulos*/
+
+#articles{
+    float: left;
+    width: 860px;
+}
+
+.articles-box {
+    font-size: 40px;
+    height: 75px;
+    line-height: 75px;
+    margin-top: 40px;
+    text-align: center;
+    padding: auto;
+    width: 100%;
+}
+
+#articles article {
+    color: black;
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 2px solid #ddd;
+    font-family: "TrebuchetMS";
+    height: auto;
+    margin: 40px auto;
+    padding: 10px;
+    width: 98.5%;
+}
+
+#articles > article > h4 {
+    display: block;
+    font-size: 23px;
+    margin: 3px;
+}
+#articles > article > h4 > a{
+    color: #00538c;
+    text-decoration: none;
+}
+
+#articles > article > h4 > a:hover{
+    color: #00538c;
+    text-decoration: underline;
+}
+
+#articles .data {
+    background-color: #393d3f;
+    border-radius: 0px 0px 0px 5px;
+    color: white;
+    float: right;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    margin: -10px;
+    padding: 4px;
+}
+#articles .data > span {
+    margin: 5px;
+}
+
+#articles > article > p {
+    margin: 10px 0px;
+    font-size: 15px;
+}
+
+#blog {
+    height: 100px;
+    line-height: 100px;
+    margin-top: 60px;
+}
+
+#blog a {
+    color: #00538c;
+    display: block;
+    font-family: "BebasNeue";
+    font-size: 40px;
+    letter-spacing: 3px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/*-----------------------------------------------------------------*/
+
+/*Pie de pagina*/
+#footer {
+    color: white;
+    background-color: black;
+    height: 470px;
+    width: 100%;
+}
+
+.footer-boxes {
+    color: white;
+    margin: 15px 40px 15px 40px;
+    float: left;
+    font: "TrebuchetMS";
+    height: 370px;
+    text-align: center;
+    width: 320px;
+}
+
+.footer-box {
+    color: black;
+    border-radius: 5px;
+    font-size: 40px;
+    height: 50px;
+    line-height: 55px;
+    margin: 30px 0px 15px 0px;
+    padding-left: 15px;
+    text-align: center;
+    width: auto;
+}
+
+#footer a {
+    color: #37bcf9;
+    text-decoration: none;
+    transform: all 300ms;
+}
+
+#footer ul {
+    font-size: 25px;
+    margin: 20px;
+    text-align: left;
+}
+
+#footer ul li {
+    border-bottom: 1px solid #ccc;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+#footer ul li a{
+    display: block;
+    height: 40px;
+}
+
+#footer iframe {
+    border: 5px solid white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px gray;
+    height: 300px;
+    width: 100%;
+}
+
+#footer img {
+    margin-bottom: -15px;
+} 
+
+#footer #browsers img {
+    width: 45px;
+}
+
+
+/*-----------------------------------------------------------------*/
+
+    /*Animaciones y transiciones significativas*/
+
+/*LOGO Y MENU*/
+#menu ul li a:hover{
+    color: #37bcf9;
+    transform: scale(1.2);
+    transition: all 200ms;
+}
+
+@keyframes rotate-gear {
+    from {
+        transform: rotate(0deg);
+    } to {
+        transform: rotate(360deg);
+    }
+}
+
+#logo:hover{
+    background-color: #ccc;
+    border-radius: 2px;
+    color: black;
+}
+
+#logo:hover .gear{
+    animation: fromBelowGear 500ms linear normal;
+}
+
+@keyframes fromBelowGear{
+    0%{
+        transform: translateY(0%);
+    }
+    50%{
+        transform: translateY(200%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+#logo:hover h3{
+    animation: fromRightHead 300ms linear normal;
+}
+
+@keyframes fromRightHead {
+    from {
+        transform: translateX(200%)
+    } to {
+        transform: translateX(0%)
+    }
+}
+
+/*BANNER*/
