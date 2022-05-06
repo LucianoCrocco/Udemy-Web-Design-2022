@@ -1,0 +1,137 @@
+    /*PANTALLAS MEDIANAS*/
+@media(max-width:1250px){
+    /*Banner*/
+    #banner h1 {
+        font-size: 45px;
+    }
+    /*Tarjetas*/
+    .wrap{
+        width: 90%;
+    }
+    .card{
+        width: 17%;
+        margin: 1.45%;
+    }
+    /*Articulos y barra lateral */
+    #articles{
+        width: 65%;
+    }
+    /*Footer*/
+    #footer h5 {
+        font-size: 30px;
+    }
+    #footer > .wrap > #menu-footer,
+    #footer > .wrap > #location,
+    #footer > .wrap > #info {
+        width: 25%;
+    }
+    #footer > .wrap > #info a > img{
+        width: 15%;
+    }
+} 
+
+@media(max-width:1080px){
+    /*Banner*/
+    #banner h1 {
+        font-size: 35px;
+    }
+    /*Tarjetas*/
+    .card .category{
+        font-size: 17px;
+    }
+    .card .description{
+        font-size: 14px;
+    }
+    /*Articulos y barra lateral */
+    #articles{
+        width: 61%;
+    }
+    /*Footer*/
+    #footer h5 {
+        font-size: 25px;
+    }
+    #footer > .wrap > #menu-footer,
+    #footer > .wrap > #location,
+    #footer > .wrap > #info {
+        width: 24%;
+    }
+
+    #footer > section > nav > ul > li > a {
+        font-size: 25px;
+    }
+} 
+
+@media(max-width:990px){
+    /*Articulos y barra lateral */
+    #articles{
+        width: 58%;
+    }
+    /*Footer*/
+    #footer h5 {
+        font-size: 22px;
+    }
+    #footer > .wrap > #menu-footer,
+    #footer > .wrap > #location,
+    #footer > .wrap > #info {
+        margin: 20px;
+        width: 28%;
+    }
+    #footer > .wrap > #info a > img{
+        width: 14%;
+    }
+    #footer > section > nav > ul > li > a {
+        font-size: 22px;
+    }
+} 
+
+@media(max-width:900px){
+    /*Banner*/
+    #banner h1 {
+        line-height: 50px;
+        font-size: 30px;
+    }
+    @keyframes showText{
+        0%{
+            transform: translateX(-600%) scale(3, 3);
+            opacity: 1;
+        }
+        50%{
+            transform: translateX(600%) scale(3, 3);
+            opacity: 1;
+        }
+        73%{
+            color: transparent;
+            opacity: 0;
+            text-shadow: none;
+            transform: translateX(-600%) scale(3, 3);
+        }
+    }
+    /*Tarjetas*/
+    .card .category{
+        font-size: 15px;
+    }
+    .card .description{
+        font-size: 13px;
+    }
+    /*Articulos y barra lateral */
+    #articles{
+        width: 54%;
+    }
+    
+    /*Footer*/
+    #footer h5 {
+        font-size: 18px;
+    }
+    #footer > section > nav > ul > li > a {
+        font-size: 18px;
+    }
+} 
+
+
+/*--------------------------------------------------------------------*/
+
+    /*PANTALLAS MOVILES*/
+
+@media(max-width:840px){
+
+}

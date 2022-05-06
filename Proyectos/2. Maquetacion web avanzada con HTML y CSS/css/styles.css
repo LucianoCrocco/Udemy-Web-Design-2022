@@ -1,6 +1,6 @@
-/*ESTILOS GENERALES*/
+    /*ESTILOS GENERALES*/
 
-    /*FUENTES PERSONALIZADAS*/
+/*FUENTES PERSONALIZADAS*/
 @font-face {
     font-family: "TrebuchetMS";
     src: url("../assets/fonts/TrebuchetMS.ttf");
@@ -26,7 +26,7 @@
     font-style: normal;
 }
 
-    /*GENERALES*/
+/*GENERALES*/
 *{
     padding: 0px;
     margin: 0px;
@@ -63,6 +63,26 @@ body{
     margin: 30px 0px 30px 0px;
     padding-left: 15px;
     width: auto;
+}
+
+.overlay {
+    background: #f4f7fe;
+    border: 3px solid white;
+    box-shadow: 0px 0px 4px #ccc;
+    cursor: pointer;
+    display: block;
+    height: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-left: 70px;
+    margin-top: -55px;
+    opacity: 0;
+    padding: 5px;
+    position: absolute;
+    text-shadow: 0px 0px 1px #ccc;
+    transform: translateX(-80%);
+    transition: all 400ms;
 }
 
 /*-----------------------------------------------------------------*/
@@ -141,6 +161,7 @@ body{
     box-shadow: 0px 0px 2px gray;
     height: 100px;
     margin: 20px auto;
+    overflow: hidden;
     width: 94.8%;
 }
 
@@ -168,6 +189,7 @@ body{
     float: left;
     height: 305px;
     margin: 40px 20px 20px;
+    transition: all 300ms;
     overflow: hidden;
     width: 205px;
 }
@@ -182,6 +204,7 @@ body{
     margin: 0px auto;
     line-height: 130px;
     text-align: center;
+    transition: all 300ms;
     width: 100%;
 }
 
@@ -192,6 +215,7 @@ body{
     height: 50px;
     margin-top: 25px;
     text-align: center;
+    transition: all 300ms;
     width: 100%;
 }
 
@@ -199,6 +223,7 @@ body{
     font-family: "TrebuchetMS";
     font-size: 15px;
     text-align: center;
+    transition: all 300ms;
 }
 
 /*-----------------------------------------------------------------*/
@@ -352,6 +377,7 @@ button:hover{
 #social-media {
     height: 180px;
     width: 70px;
+    transition: all 300ms;
 }
 
 #social-media a{
@@ -432,6 +458,7 @@ button:hover{
     height: 100px;
     line-height: 100px;
     margin-top: 60px;
+    transition: all 1s;
 }
 
 #blog a {
@@ -442,6 +469,7 @@ button:hover{
     letter-spacing: 3px;
     text-align: center;
     text-decoration: none;
+    transition: all 500ms;
 }
 
 /*-----------------------------------------------------------------*/
@@ -497,6 +525,7 @@ button:hover{
 #footer ul li a{
     display: block;
     height: 40px;
+    transition: all 300ms;
 }
 
 #footer iframe {
@@ -570,3 +599,135 @@ button:hover{
 }
 
 /*BANNER*/
+#banner {
+    animation: backBanner 10s linear;
+}
+
+@keyframes backBanner{
+    0%{
+        background-position: 0px 0px;
+    }
+    100%{
+        background-position: -280px -144px;
+    }
+}
+
+#banner h1 {
+    animation: showText 10s linear;
+}
+
+@keyframes showText{
+    0%{
+        transform: translateX(-600%) scale(5, 5);
+        opacity: 1;
+    }
+    50%{
+        transform: translateX(600%) scale(5, 5);
+        opacity: 1;
+    }
+    75%{
+        color: transparent;
+        opacity: 0;
+        text-shadow: none;
+        transform: translateX(-600%) scale(5, 5);
+    }
+}
+
+/*TARJETAS*/
+.card:hover {
+    background-color: black;
+}
+
+.card:hover .icon{
+    font-size: 70px;
+    color: #37bcf9;
+    animation: showIcon 350ms linear;
+}
+
+@keyframes showIcon { 
+    from {
+        transform: translateY(-200%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+
+.card:hover .category{
+    color: white;
+    animation: showCategory 400ms linear;
+}
+
+@keyframes showCategory { 
+    from {
+        transform: translateY(-300%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+
+.card:hover .description{
+    color: white;
+    animation: showDescription 400ms linear;
+}
+
+@keyframes showDescription { 
+    from {
+        transform: translateX(-300%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+/*REDES SOCIALES*/
+
+#social-media article:hover .overlay{
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+
+#social-media:hover {
+    width: 200px;
+    transition: all 300ms;
+}
+
+/*CAJA IR AL BLOG*/
+#blog:hover{
+    background-color: #333;
+    border: 10px solid #37bcf9;
+    border-radius: 240px;
+    box-shadow: 0px 0px 10px gray;
+    animation: blink 10s infinite linear;
+}
+
+#blog:hover a{
+    color: white;
+    text-shadow: 1px 1px 1px black, 1px 2px 1px black, 1px 3px 1px black, 1px 4px 1px black, 1px 5px 1px black, 1px 6px 1px black;
+}
+
+@keyframes blink {
+    0%{
+        border: 10px solid #37bcf9;
+    }
+    25%{
+        border: 10px solid green;
+    }
+    50%{
+        border: 10px solid yellow;
+    }
+    75%{
+        border: 10px solid white;
+    }
+    100%{
+        border: 10px solid #37bcf9;
+    }
+}
+
+#footer ul li a:hover{
+    color: white;
+    padding-left: 40px;
+    transition: all 300ms;
+}
