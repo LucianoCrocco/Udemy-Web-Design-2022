@@ -1,0 +1,66 @@
+SASS
+
+1. ¿Qué es un preprocesador CSS?
+2. Instalar SASS
+3. Variables y compilación
+4. Anidación
+5. Módulos
+6. Mixins
+7. Herencia
+8. Operadores
+9. Condicionales
+10. Bucles
+
+
+1. ¿Que es un preprocesador css y para que sirve?
+https://developer.mozilla.org/es/docs/Glossary/CSS_preprocessor
+https://sass-lang.com/
+SASS es un preprocesador que añade capas de funcionalidades a CSS. Dotando a CSS de ciertas caracteristicas de un lenguaje de programación.
+SASS cuenta con dos tipos de sintaxis.
+SCSS: Requiere de puntos, comas, punto y coma, llaves, etc.
+Sass: Parecida a Python, no requiere de llaves, punto y coma, etc.
+
+
+2. Variables y compilación
+Las variables se declaran con el signo '$':'Dato/s'.
+
+La compilación del archivo SASS la realizamos desde una terminal de comandos. Dentro del proyecto ubicamos nuestro archivo SASS/SCSS realizamos el comando sass --watch ARCHIVO.SASS PATH*_ARCHIVODESTINO.css
+La flag --watch le va a indicar a SASS que este atento a cambios dentro del archivo a compilar y que recompile en el mismo PATH si se produce un guardado. El watch durará siempre y cuando no cerremos la terminal de comandos.
+
+Tambien la compilación genera un archivo .map
+A source map is a .map file in JSON format that gets generated when your Sass files are compiled into CSS. It contains information that links each line of your CSS file (the output) to the corresponding line in its SCSS source file (the input). https://www.sitepoint.com/using-source-maps-debug-sass-chrome/#:~:text=A%20source%20map%20is%20a,source%20file%20(the%20input).
+
+3. Módulos
+Los modulos que son partes parciales de una gran clase comienzan con el _ en su nombre por convención, así le indicaremos a otros desarrolladores que ese archivo es una partial class.
+Simplemente utilizamos @use 'PATH'; y ya estaremos importando el SASS. Los modulos parciales y las extensiones no son necesarias, simplemente ponemos el nombre del archivo.
+
+4. Mixins con SASS
+Los Mixins son "funciones" que por parametros asignan un valor a una variable dependiendo desde donde la ejecutemos y los parametros que les pasemos. Si no le pasamos una variable o no le asignamos un valor por defecto puede romper nuestro CSS. Las llamamos con el @include MIXIN() en el scope a utilizar.
+Ejemplo:
+    @mixin theme($theme: DarkGray) {
+    background: $theme;
+    box-shadow: 0 0 1px rgba($theme, .25);
+    color: #fff;
+    }
+    .info {
+    @include theme;
+    }
+    .alert {
+    @include theme($theme: DarkRed);
+    }
+    .success {
+    @include theme($theme: DarkGreen);
+
+5. Herencia
+Los estilos heredables en CSS llevan delante el signo %. Para utilizarlo en otra clase utilizo la palabra reservada @extender %NOMBRE;
+
+6. Operadores
+SASS nos permite hacer operaciones matematicas dentro de CSS.
+
+7. Condicionales
+SASS nos permite hacer operaciones logicas dentro de CSS, incluye bucles y condicionales. Ambos comparten las operaciones  +, -, and, or, not, *, /, %, <, <=, >, >=, ==, !=, = cuando este disponible.
+Sintaxis: @if EXPRESION, @else EXPRESION, @else if EXPRESION 
+
+8. Bucles
+Sintaxis: @for $VARIABLE from START_POINT through END_POINT, @each $v in $VAR, @while CONDITION
+Para acceder a una variable en un parametro utilizamos la nomeclatura #{$VARIABLE} 

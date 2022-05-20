@@ -1,0 +1,20 @@
+@media(max-width: 1118px){
+    #header{
+        grid-template-columns: 100%;
+        justify-content: center;
+        text-align: center;
+        height: 150px;
+    }
+    #content {
+        grid-template-columns: 1fr;
+    }
+    #projects{
+        align-items: center;
+        grid-template-columns: 1fr;
+    }
+    
+    #aside ul {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 1fr);
+    }
+}

@@ -1,0 +1,56 @@
+/* Estilos generales */
+body {
+    --crimson: crimson;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#layout {
+    border: 3px solid black;
+    max-width: 1200px;
+    margin: auto;
+    padding: 5px;
+}
+
+.caja {
+    background-color: gray;
+    border: 4px solid #222;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    /*flex-grow: 1;*/
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.red {
+    /*order: 1;*/
+    /*flex-basis: calc((100%/3) - 80px);*/
+    background-color: var(--crimson);
+}
+
+.green {
+    /*flex-basis: 100%;*/
+    /*order: -1;*/
+    background-color: greenyellow;
+}
+
+.blue {
+    background-color: steelblue;
+    /*flex-grow: 2;*/
+    /*order: 0;*/
+}
+
+.orange {
+    /*order: 2;*/
+    background-color: tomato;
+}
+
+/* Flexbox */
+.flexbox {
+    display: flex;
+    /*flex-direction: row;
+    flex-wrap: wrap;*/
+    flex-flow: row wrap;
+}

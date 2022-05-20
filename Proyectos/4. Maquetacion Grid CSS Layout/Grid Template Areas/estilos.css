@@ -1,0 +1,67 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+#website {
+    border: 1px solid #ccc;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 150px 70px 1fr 70px;
+    grid-template-areas: 
+        "cabecera cabecera cabecera cabecera cabecera"
+        "menu menu menu menu menu"
+        "contenido contenido contenido contenido lateral"
+        "pie pie pie pie pie";
+    height: 85vh;
+    margin: 0 auto;
+    width: 75%;
+}
+
+#cabecera{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: blue;
+    color: white;
+    grid-area: cabecera;
+}
+
+#menu {
+    background-color: lightblue;
+    color: black;
+    line-height: 80px;
+    grid-area: menu;
+}
+#menu ul {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);  
+    list-style: none;
+}
+#contenido {
+    background-color: #eee;
+    display: grid;
+    padding: 1px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-area: contenido;
+}
+
+#contenido article {
+    background-color: #ccc;
+    border: 1px solid #555;
+    margin: 3px;
+}
+
+#lateral {
+    background-color: orange;
+    color: white;
+    grid-area: lateral;
+}
+
+#pie-pagina {
+    background-color: black;
+    color: white;
+    grid-area: pie;
+}

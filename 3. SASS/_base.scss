@@ -1,0 +1,108 @@
+//Variables y uso de variables
+$color-fondo: #ccc;
+$color-parrafo: rgb(122,20,20);
+
+body {
+    background-color: $color-fondo;
+}
+p{
+    color: $color-parrafo;
+}
+
+.caja {
+    border: 1px solid black;
+    background-color: white;
+    margin: 0px auto;
+    padding: 10px;
+    text-align: center;
+    width: 500px;
+}
+//Anidación
+.caja {
+    h1 {
+        color: blue;
+    }
+    
+    p {
+        color: green;
+    }
+
+    .info {
+        font-size: 10px;
+
+        .autor {
+            color: orange;
+            font-size: 15px;
+        }
+    }
+}
+
+//Mixins
+@mixin crearBordes($color: 'grey') {
+    border: 5px solid $color;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px black;
+}
+
+.caja {
+    @include crearBordes();
+}
+
+.listado {
+    margin-top: 15px;
+    @include crearBordes(darkGrey);
+}
+
+//Herencia
+%alert-normal {
+    border: 1px solid grey;
+    background-color: #eee;
+    color: gray;
+    margin: 20px;
+    padding: 10px;
+    width: 100%;
+}
+
+.alert {
+    @extend %alert-normal;
+}
+
+.alert-danger {
+    @extend %alert-normal;
+    color: red;
+    border-color: red;
+}
+
+.alert-success{
+    @extend %alert-normal;
+    color: green;
+    border-color: green;
+}
+
+//Operadores
+h1 {
+    font-size: (10px + 5px) * 2;
+}
+
+.caja {
+    width: 500px / 1920px * 100%;
+}
+
+//Condicionales - if 
+h1 {
+    @if $color-fondo == #ccc and color == white{
+        color: black;
+    } @else if $color-fondo == white {
+        color: lightsalmon;
+    } @else {
+        color: red;
+    }
+}
+
+//For 
+@for $contador from 0 through 8{
+    .listado ul li:nth-child(#{$contador}) {
+        font-size: $contador * 10px;
+    }
+}
+

@@ -1,0 +1,17 @@
+#menu{
+    height: 50px;
+}
+#menu ul {
+    list-style: none;
+    line-height: 50px;
+    text-decoration: none;
+}
+.item{
+    height: 150px;
+}
+.lateral {
+    height: 550px;
+}
+.lateral > div {
+    height: calc(550px / 3);
+}

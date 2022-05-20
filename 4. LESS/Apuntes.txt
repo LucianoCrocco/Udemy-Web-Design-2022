@@ -1,0 +1,38 @@
+LESS
+
+1. Introducción a LESS
+2. Instalar LESS
+3. Variables y compilación
+4. Anidación
+5. Mixins
+6. Operadores
+7. Condicionales
+8. Bucles
+
+1. LESS
+https://lesscss.org/
+Las variables en LESS se declaran con el @NOMBRE: DATO;
+@{b}{DATOS} -> De esta manera puedo acceder a un elemento HTML guardado en una variable.
+Para compilar el CSS utilizamos el comando: lessc ARCHIVO.LESS DESTINO.CSS. El destino lo crea LESS en caso de no existir.
+
+2. Mixins y anidación
+LESS también incluye las "funciones" mixin y la anidación.
+Anidación de igual manera que SASS
+Para delcarar un mixins utilizamos la siguiente sintaxis: .NOMBRE_MIXIN(@PARAMETROS:VALORPORDEFECTO*);
+
+3. Operadores, mixins de control y bucles
+Misma cantida de operadores que SASS.
+
+.CLASE(@PARAMETROS) when (CONDICION){} Seria un if para ejecutar una clase. Si queremos una condicion DENTRO de una clase simplemente utilizamos la palabra reservada if((CONDICIONES), [EJECUTA1, EJECUTA2, EJECUTA_N])
+
+La siguiente sintaxis utilizamso para ejecutar una clase en bucle:
+.loop(@cont) when (@cont > 0){
+    .loop((@cont -1));
+    CONDICIONES A EJECUTAR
+}
+La siguiente sintaxis para ejecutar codigo dentro de una clase en bucle:
+each(range(4), {
+  .col-@{value} {
+    height: (@value * 50px);
+  }
+});

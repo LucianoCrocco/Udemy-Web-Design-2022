@@ -1,0 +1,9 @@
+//Variables y uso de variables
+$color-letra: red;
+$fuente: sans-serif, Helvetica, Arial;
+
+h1 {
+    color: $color-letra;
+    font-family: $fuente;
+    text-decoration: underline;
+}

@@ -1,0 +1,72 @@
+Grid Layout
+
+1. Introducción a CSS Grid Layout
+2. Columnas
+3. Fracciones
+4. Filas
+5. Expansión
+6. Maquetación completa
+7. Template Areas
+8. Grid Gap
+9. De FlexBox a Grid
+10. Responsive con Grid
+
+
+1. ¿Que es CSS Grid Layout? 
+https://developer.mozilla.org/es/docs/Web/CSS/CSS_Grid_Layout
+CSS Grid no es mas que una nueva tecnologia nativa de maqueteado CSS que, a diferencia de Flex, es bidireccional/bidimensional. Podemos crear una rejilla tanto horizontalmente como verticalmente en columnas y filas.
+CSS Grid layout contiene funciones de diseño dirigidas a los desarrolladores de aplicaciones web. El CSS grid se puede utilizar para lograr muchos diseños diferentes. También se destaca por permitir dividir una página en áreas o regiones principales, por definir la relación en términos de tamaño, posición y capas entre partes de un control construido a partir de primitivas HTML.
+
+Comparte propiedades con FlexBox, como align items, align self o justify content.
+
+Puedo, una vez realizado el maqueteado Grid, utilizar FlexBox dentro de cada elemento de Grid para que su contenido se organice en cajas y pueda utilizar propiedades de Flex ya que son 100% adaptables al tamaño que lo contienen, a difrencia de Grid que si utilizo align items no va a ocupar el 100% del contenedor, solo lo que ocupe ese elemento en concreto.
+
+2. Primeros pasos con CSS Grid Layout
+Grid solamente actua dentro de la etiqueta que englobe los elementos que queremos utilizar en Grid.
+Puedo tener Grid dentro de grid. Por ejemplo una section que es afectada por un grid del contenedor, esa section puede ser grid y que sus articles dentro se comporten como un sub-grid del padre. Puedo saltear un elemento padre para hacer grid un elemento mas especifico. Por ejemplo tener un contenedor grid, un <nav> y ese <nav> tener un <ul> para que se aplique grid a los <li>. Quedaria algo asi: Contenedcor(Grid)->Nav(Se acomoda al grid del contedor)->Ul(Genero un sub-grid para sus elementos dentro del "contenedor" nav, que a su vez esta contenido dentro del contenedor general. Nav en ningún momento tiene un display:grid).
+
+display:grid; Dentro de la etiqueta que englobe.
+grid-template-columns: X% Y% N%; Indico la cantidad de columnas y cuanto espacio va a ocupar cada una, podemos utilizar porcentajes o fr (fracción).
+
+3. Fraccion y repeat
+Para no repetir poner N cantidad de columnas puedo utilizar la propiedad repeat(CANTIDAD, TAMAÑO); Puedo combinar repeats en caso de tener distintas medidas.
+Las fracciones permiten que se ajusten el tamaño automaticamente a la cantidad que tenga al lado. Es decir si tengo cuatro va a ser una fraccion de esas cuatro.    
+Existe la propiedad auto-fill para que automaticamente se genere un wrap en caso de no tener en claro cuantas columnas o filas ocupar si tengo un tamaño predeterminado que puede generar overflow. 
+
+4. Columnas y filas
+grid-template-rows: Funciona igual que las columnas.
+El tamaño de los elementos se adaptan al espacio disponible de las filas y columnas
+
+5. Expandir columnas
+grid-column-start: X; ->En que linea comienza el elemento.
+grid-column-end: X; -> En que linea de columna termina. En caso de enviar algun elemento hacia la linea de abajo se genera una nueva fila y el elemento empujado se coloca en esa nueva fila.
+grid-column: INICIO / FINAL; -> engloba el start y el end.
+
+6. Expandir filas
+grid-row-start: X; -> En que linea comienza el elemento.
+grid-row-end: X; -> En que linea de row termina. En caso de enviar algun elemento hacia la linea de abajo se genera una nueva fila y el elemento empujado se coloca en esa nueva fila.
+grid-row: INICIO / FINAL; -> engloba el start y el end.
+
+7. Grid Responsive
+Grid es Responsive y dependiendo del media query podemos modificar la distribución del contenido en caso de ser necesario
+
+8. Grid Template Areas
+https://developer.mozilla.org/es/docs/Web/CSS/grid-template-areas
+Con las Grid Template Areas vamos a evitar tener que estar expandiendo columnas y filas. De forma mucho mas rapida y responsive vamos a poder formar una maquetacion.
+grid-template-areas: Se organizan en la cantidad de filas disponible y en la cantidad de columnas. Encapsulo un nombre en una o varias filas/columnas con comillas, luego ese nombre se lo tengo que aplicar a un estilo css con la propiedad grid-area: nombre;
+Ejemplo: 5 Columnas 2 filas
+grid-template-areas: "cabecera cabecera cabecera cabecera cabecera" "contenido contenido contenido contenido aside"
+#cabecera{
+    grid-area: cabecera;
+}
+#aside{
+    grid-area: aside;
+}
+#contenido {
+    grid-area: contenido;
+}
+
+De esta manera me ahorro la necesidad de escribir por cada CSS cuando va a ocupar o que lineas.
+Puedo hacer con un solo juego de comillas, una vez se exceda la cantida de filas o columnas va hacia una nueva linea hacia abajo. En caso de que quede una celda vacia el siguiente elemento HTML ocupara esa celda.
+Es recomendable para hacerlo mas legible arbrir comillas por cada fila y enter cuando hayamos terminado las columnas en esa fila.
+Si quiero que el siguiente elemento que ocupe mi Grid Area sea cualquiera  utilizo el '.', así le indico que el siguiente elemento HTML que encuentre se posicione alli o que se asigne un espacio vacio.

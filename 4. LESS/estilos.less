@@ -1,0 +1,66 @@
+// Variables
+@bgcolor: lightblue;
+@b: body;
+@fuente: 'Arial';
+
+@{b}{
+    background: @bgcolor;
+}
+
+h1{
+    font-family: @fuente;
+}
+
+// Anidación
+.informacion {
+    ul {
+        a {
+            font-size: 18px;
+            text-decoration: none;
+        }
+    }
+}
+
+//Mixins
+.sombras(){
+    box-shadow: 0px 0px 15px black;
+    text-shadow: 0px 0px 5px black;
+}
+
+.colorH1(@color:blue){
+    color: @color;
+}
+
+h1 {
+    .colorH1(crimson);
+}
+
+.informacion {
+    .sombras();
+}
+
+//Operadores
+h1 {
+    font-size: 30px + 7px;
+}
+
+//Mixins
+.textoNegro(@value) when (@value = true){
+    color: black;
+}
+
+h1{
+    color: crimson;
+    .textoNegro(false);
+}
+
+//Bucles
+.loop(@cont) when (@cont > 0){
+    .loop((@cont - 1));
+    height: ((900px / 50) * @cont);
+}
+
+.informacion {
+    height: 900px;
+    .loop(5);
+}

@@ -56,7 +56,7 @@ El modelo de caja se compone del margen (separa los otros elementos HTML), borde
 
 Con la propiedad float vamos a poder posicionar cajas a nuestro gusto. Float me parmite flotar elementos en el eje Y.
 Float es aplicable a todos los elementos de bloque.
-Con la propiedad display podemos cambiar el tipo a bloque o linea.
+Con la propiedad display podemos cambiar el tipo a en bloque, en linea, combinacion de ambos y si queremos ocultar ese elemento.
 
 La propiedad clear nos permite resetear la propiedad de los flotados para volver a colocar elementos en bloque en flotado por defecto.
 La propiedad la vamos a colocar en una clase la cual la vamos a asginar a un div luego de la caja flotada. También debemos hacer un float: none;

@@ -1,0 +1,94 @@
+Flexbox
+
+1. Introducción
+2. Displays
+3. Direcciones
+4. Envoltorio
+5. Orden
+6. Grow y Shrink
+7. Flex basis
+8. Variables y funciones de CSS
+9. Alineación
+10. Maquetación completa en Flexbox
+
+Links de interes y de practica:
+https://developer.mozilla.org/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
+https://flexboxfroggy.com/#es
+http://www.flexboxdefense.com/
+
+1. Introducción
+Flexbox es un modulo de CSS que define un nuevo modelo de cajas. Es una forma diferente a maquetar con los floats y los positions.
+Optimiza y flexibiliza a la hora de maquetar y hacer responsive.
+El diseño flex permite distribuir los elementos en dirección vertical u horizontal.
+Se pueden flexibilizar los tamaños de manera automatica. Todas estas cajas van a ir aumentando de tamaño en función de si tienen elementos al lado o no, etc.
+Viene a "reemplazar" el flotado, es una tecnologia muy utilizada por frameworks de CSS.
+
+2. Conceptos Flexbox
+Flebox tiene una particularidad, debemos indicarle la caja que va a contener nuestras cajas flexibles. No puedo trabajar con flexbox seleccionando etiquetas sueltas. Debo organizar todos los elementos dentro de una caja.
+
+3. Display flex e inline-flex
+https://developer.mozilla.org/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox#el_contenedor_flex
+Un área del documento que contiene un flexbox es llamada contendedor flex. Para crear un contenedor flex, establecemos la propiedad del área del contenedor display como flex o inline-flex. Tan pronto como hacemos esto, los hijos directos de este contenedor se vuelven ítems flex. Como con todas las propiedades de CSS, se definen algunos valores iniciales, así que cuando creemos un contenedor flex todos los ítems flex contenidos se comportarán de la siguiente manera:
+Los ítems se despliegan sobre una fila (la propiedad flex-direction por defecto es row).
+Los ítems empiezan desde el margen inicial sobre el eje principal.
+Los ítems no se ajustan en la dimensión principal, pero se pueden contraer.
+Los ítems se ajustarán para llenar el tamaño del eje cruzado.
+La propiedad flex-basis es definida como auto.
+La propiedad flex-wrap es definida como nowrap.
+
+Flex e inline-flex ambos aplican el diseño flexible a los hijos del contenedor. El contenedor con display:flex se comporta como un elemento a nivel de bloque, mientras que display:inline-flex hace que el contenedor se comporte como un elemento en línea.
+
+4. Direcciones
+Puedo setear la direccion de los elementos que componen mi flexbox como filas o columnas. Puedo indicar que sea una alineación de izquierda a derecha o reverse (derecha->izquierda) para filas o de arriba hacia abajo si es column y si es reverse de abajo hacia arriba. 
+
+La propiedad CSS justify-content define cómo el navegador distribuye el espacio entre y alrededor de los items flex, a lo largo del eje principal de su contenedor.
+
+5. Envoltorio en flex
+https://developer.mozilla.org/es/docs/Web/CSS/flex-wrap
+https://developer.mozilla.org/es/docs/Web/CSS/flex-flow
+Flexbox tiene un problema al declararse por defecto. No establece un maximo de elementos por linea. Lo que puede generar un overflow en caso de no correguirlo en el CSS.
+Para que esto no suceda podemos utilizar el flex-wrap para que se comporte como un envoltorio y no suceda el overflow del width. 
+La propiedad flex-wrap de CSS  especifica si los elementos "hijos" son obligados a permanecer en una misma línea o pueden fluir en varias líneas. Si la cobertura (wrap) está permitida, esta propiedad también te permite controlar la dirección en la cual serán apilados los elementos.
+
+Tambien existe otra propiedad llamada flex-flow que une las propiedades flex-direction y flex-wrap
+
+6. Orden
+Existe la propiedad order que no es propia de FlexBox sino que debe utilizarse dentro de los elementos que compone el mismo. Dando un order vamos a esteblacer una jerarquía a los elementos para posicionarse en cierto lugar. Para tener un orden positivo debemos establecer el numero a todos los elementos. En caso de no tenerlo utilizamos numeros negativos para dar el orden.
+
+7. Grow
+https://developer.mozilla.org/es/docs/Web/CSS/flex-grow
+La propiedad flex-grow de CSS especifica el factor de crecimiento de un elemento flexible (que tiene asignado display:flex), en su dirección principal. El factor de crecimiento especifica qué cantidad del espacio restante dentro del contenedor flexible, debería ocupar el item en cuestión.
+Es una propiedad especialmente util a la hora de hacer responsive un flexbox. Es una propiedad utilizada dentro de los elementos hijos del flexbox.
+flex-grow: NUMERO; -> El numero indica que tanto espacio va a ocupar el elemento en si, puedo especificar que uno elemento sea mas grande que otro poniendole un numero distinto. Se podria pensar como "Dale esta X a tanto y a Y dale N cantidad de veces mas espacio que a X"
+El espacio restante es el tamaño del contenedor flexible menos el tamaño de todos los elementos flexibles juntos. Si todos los ítems dentro del contenedor tienen el mismo factor de crecimiento, todos los elementos reciben la misma cantidad del espacio restante. De lo contrario, el espacio restante se distribuye en función de los diferentes factores de crecimientos de cada item.
+
+8. Shrink
+https://developer.mozilla.org/es/docs/Web/CSS/flex-shrink
+https://stackoverflow.com/questions/42820888/flex-shrink-not-working-as-expected
+La propiedad CSS flex-shrink especifica el factor de contracción de un flex item. Los flex items se encogerán para llenar el contenedor de acuerdo a su número flex-shrink, cuando el tamaño por defecto de los flex items sea mayor al de su contenedor flex container.
+
+flex-shrink is designed to distribute negative free space in the container.
+In other words, it only works when flex items are big enough to overflow the container.
+You're not having that problem here. There is no negative space. Therefore, I don't believe flex-shrink is having any effect on your layout.
+flex-grow is consuming the positive free space and seems to be working fine.
+You would need to set a flex-basis or add content to the items to put flex-shrink in play.
+
+9. Flex basis, grow, calc y variables CSS
+https://developer.mozilla.org/es/docs/Web/CSS/flex-basis
+La propiedad de CSS flex-basis especifíca la base flexible, la cual es el tamaño inicial de un elemento flexible. Ésta propiedad determina el tamaño de una caja de contenidos a no ser que se haya especificado de otra forma usando box-sizing.
+
+Puedo declarar variables propias de CSS con la sintaxis --NOMBRE: DATO; y llamarlas dentro de un scope con la etiqueta var(--VARIABLE);
+
+10. Alineación horizontal
+justify-content: space-around; -> Mismo espacio entre ellos dejando un espacio con el margen
+justify-content: space-around; -> Mismo espacio entre ellos contando el mismo espacio con el margen
+justify-content: space-between; -> Espacio entre ellos sin contar el margen
+justify-content: center; -> Centra el contenido
+justify-content: flex-end; -> Alinear items flex desde el comienzo
+justify-content: flex-start; -> Alinear items desde el final
+justify-content: left;
+justify-content: right;
+
+10. Alineación vertical
+https://developer.mozilla.org/es/docs/Web/CSS/align-items
+https://developer.mozilla.org/es/docs/Web/CSS/align-self

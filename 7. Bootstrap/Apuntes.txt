@@ -1,0 +1,49 @@
+Bootstrap
+1. Introducción a Bootstrap
+2. Filas y columnas
+3. Maquetación
+4. Utilidades
+5. Componentes
+
+https://getbootstrap.com/docs/4.3/getting-started/introduction/
+
+1. ¿Que es Bootstrap y para que sirve?
+Bootstrap es un framework para CSS. Un framework es un marco de trabajo que proporciona funcionalidades y herramientas ya desarrolladas.
+Bootstrap es un toolkit open-source para desarrolladores de HTML, CSS y JS. Incluye SASS, responsive flexbox, grid, componentes pre construidos, etc.
+
+Si quiero utilizar un width, padding, botones, justify-content, etc. Tengo todo en la documentación que indiqué más arriba. No voy a tomar nota salvo que sea necesario o esa algo muy especifico de como funciona bootstrap.
+
+2. Filas y columnas CSS Grid y Flexbox
+https://getbootstrap.com/docs/4.0/layout/grid/
+Bootstrap utiliza un sistema Grid implementando flexbox y orientado al mobile-first. "Use our powerful mobile-first flexbox grid to build layouts of all shapes and sizes thanks to a twelve column system".
+Los layouts suelen tener distintos tipos de tamaños. Suelen ser utilizados para hacer responsive la pagina.
+El maximo de columnas en Bootstrap es de 12. Tengo la class column o row para indicar su posicionamineto y para poder utilizar este layout deben estar los elementos encapsulados en una clase container como indica la documentación.
+
+3. Offset
+https://getbootstrap.com/docs/4.0/layout/grid/#offsetting-columns
+El offset nos va a permitir meter columnas de espaciado entre las diferentes columnas.
+Las columnas de espaciado se colocan a la izquierda y no a la derecha.
+
+4. Responsive Web Design
+https://getbootstrap.com/docs/4.0/layout/overview/
+El container-fluid va a tomar ser flexible la 100% del viewport. De esta manera los elementos que esten contenidos se va a adaptar a este viewport y nos hace el trabajo de responsive mucho mas facil y acotado. 
+
+Puedo colocar varias clases que nos da Bootstrap que ya tienen incorporada los media queris para manejar el tamaño de un elemento dependiendo de los pixeles. Ejemplo: class="col-md-12 col-sm-12" -> Así le indicamos que cuando llegue al punto de quiebre que tiene la categoria md (establecido en la documentación) ocupe 12 columnas y cuando llegue al punto de quiebre de sm ocupe 12 columnas.
+Nos puede ser muy util para tener mas control y no dejar que se coloquen automaticamente.
+
+La documentación de bootstrap nos provee documentación de los breakpoints establecidos. Es especialmente util para adaptar codigo CSS ajeno a bootstrap.
+
+Bootstrap nos trae las propiedades hidden-TAMAÑO o hidden en general para todos los tamaños de pantalla.
+https://getbootstrap.com/docs/4.3/utilities/display/
+
+5. Utilidades en Bootstrap
+https://getbootstrap.com/docs/4.3/utilities
+Bootstrap nos da un monton de herramientas como altura, anchura, flotados, colores, fondos, sombras, etc. Todo esto esta disponible en la documentación simplemente ingresando el nombre en el buscador.
+
+Para aplicar height en Bootstrap el elemento debe estar contenido dentro de una caja donde se especifique el height, ya sea puesto por nosotros o por bootstrap.
+
+6. Componentes en Bootstrap
+https://getbootstrap.com/docs/4.3/components
+Los componentes son elementos muy comunes que hay dentro de una página web, por ejemplo, alertas, sliders, cartas, barras de progreso, etc. Bootstrap nos da estos elementos ya desarrollados para que podamos implementarlos.
+
+Los aria-label son simplemente nombres que se guardan para indicar que va a hacer o para que sirve ese elemento HTML.
